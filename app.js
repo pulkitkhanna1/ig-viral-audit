@@ -244,6 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const res = await fetch(`/api/audit?url=${encodeURIComponent(query)}`);
             if (res.ok) {
                 const data = await res.json();
+                if (data.error) {
+                    throw new Error(data.error);
+                }
                 clearTimeout(progressTimer);
                 loadingBanner.style.display = 'none';
                 auditSubmitBtn.disabled = false;
@@ -272,7 +275,9 @@ document.addEventListener('DOMContentLoaded', () => {
             loadingBanner.style.display = 'none';
             auditSubmitBtn.disabled = false;
             errorBanner.style.display = 'flex';
-            errorMessage.textContent = `Could not fetch live profile for @${username}. Please check that the account is public and try again.`;
+            errorMessage.textContent = err.message && !err.message.includes('status') 
+                ? err.message 
+                : `Could not fetch live profile for @${username}. Please check that the account is public and try again.`;
         }
     }
 
