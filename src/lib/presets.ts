@@ -10,7 +10,7 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
       posts_count: 8,
       bio: "🇮🇳 | 🇺🇸\nMaking AI simpler for humans 🤖\nAI Growth Hacker | Ex Bain | Ex AI Founder | Claude certified\nDon’t get replaced. Get Ahead 🚀",
       profile_url: "https://www.instagram.com/thepulkitproject/",
-      profile_pic: "https://scontent.cdninstagram.com/v/t51.82787-19/720445018_18108002923788261_4134889134769622233_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=104&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=AzEHpcVqfA0Q7kNvwFXGRX4&_nc_oc=AdoSRGsnq9YtMXG3IenKeHNj_L28178RF85Pc1VdS-6fmPC_EPHqkPhz_tzv5ejpBh9hemmLUIsVIJ7R7k3J2HUD&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=Xs5Up-A3N7ny7yOkA9ZJuQ&_nc_ss=7b60f&oh=00_AQK-JMXKQED67bNLDAqMAfPPEedW0HHp37CMtbahMoeiCw&oe=6AA4C957"
+      profile_pic: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
     },
     metrics_summary: {
       total_likes: 28337,
@@ -87,70 +87,6 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
         caption: "Your favorite creators are lying to you. 🤫\n\nThey aren’t renting expensive studios—they are using this exact AI trick.\n\nDrop “AI” in the comments...",
         winning_archetype: "Secret Exposure Mythbuster",
         cta_type: "Keyword Trigger ('AI')"
-      },
-      {
-        id: 5,
-        shortcode: "DcvF1NRq4qU",
-        url: "https://www.instagram.com/reel/DcvF1NRq4qU/",
-        product_type: "clips",
-        likes: 228,
-        comments: 74,
-        total_engagement: 302,
-        engagement_rate: "8.44%",
-        er_num: 8.44,
-        performance_tier: "Above Average",
-        hook: "Built this cool app using @higgsfield.ai Apps where I can upload any image...",
-        caption: "Built this cool app using @higgsfield.ai Apps where I can upload any image and apply any kind of cool filter instantly.",
-        winning_archetype: "App Feature Showcase",
-        cta_type: "Creator Tag"
-      },
-      {
-        id: 6,
-        shortcode: "DZgTXrwySpB",
-        url: "https://www.instagram.com/reel/DZgTXrwySpB/",
-        product_type: "clips",
-        likes: 184,
-        comments: 5,
-        total_engagement: 189,
-        engagement_rate: "5.28%",
-        er_num: 5.28,
-        performance_tier: "Baseline",
-        hook: "Into the Pulkit Project - Any last wishes",
-        caption: "Into the Pulkit Project\nAny last wishes \nInspiration @thekumarmethod",
-        winning_archetype: "Account Debut",
-        cta_type: "Question CTA"
-      },
-      {
-        id: 7,
-        shortcode: "Da3vksQgbR5",
-        url: "https://www.instagram.com/reel/Da3vksQgbR5/",
-        product_type: "carousel_container",
-        likes: 99,
-        comments: 6,
-        total_engagement: 105,
-        engagement_rate: "2.93%",
-        er_num: 2.93,
-        performance_tier: "Baseline",
-        hook: "I guess I’m lucky for Spain and Lamine 🫠",
-        caption: "I guess I’m lucky for Spain and Lamine 🫠\nAnd yeah this was the plan for the trip",
-        winning_archetype: "Personal Travel Carousel",
-        cta_type: "None"
-      },
-      {
-        id: 8,
-        shortcode: "DahiGB1KQKd",
-        url: "https://www.instagram.com/reel/DahiGB1KQKd/",
-        product_type: "clips",
-        likes: 36,
-        comments: 39,
-        total_engagement: 75,
-        engagement_rate: "2.10%",
-        er_num: 2.10,
-        performance_tier: "Underperformer",
-        hook: "Create unlimited motion control videos for 100% free!",
-        caption: "Create unlimited motion control videos for 100% free!\ncomment “Motion” to get the free tool link in your DM!",
-        winning_archetype: "Free Tool Tutorial",
-        cta_type: "Keyword Trigger ('Motion')"
       }
     ],
     winning_models: [
@@ -258,38 +194,6 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
         caption: "Swipe through to see all 7 prompt chains. Save this for your Monday planning session.",
         winning_archetype: "High-Density Swipe File Carousel",
         cta_type: "Save & Bookmark CTA"
-      },
-      {
-        id: 3,
-        shortcode: "hubspot_p3",
-        url: "https://www.instagram.com/hubspot/",
-        product_type: "clips",
-        likes: 3840,
-        comments: 240,
-        total_engagement: 4080,
-        engagement_rate: "0.62%",
-        er_num: 0.62,
-        performance_tier: "Strong Performer",
-        hook: "Why 85% of cold outreach fails in the first 3 words",
-        caption: "Here is the exact cold email template that book 40% demo conversion rates.",
-        winning_archetype: "Sales Objection & Mythbuster",
-        cta_type: "Direct CTA"
-      },
-      {
-        id: 4,
-        shortcode: "hubspot_p4",
-        url: "https://www.instagram.com/hubspot/",
-        product_type: "clips",
-        likes: 2900,
-        comments: 180,
-        total_engagement: 3080,
-        engagement_rate: "0.47%",
-        er_num: 0.47,
-        performance_tier: "Baseline",
-        hook: "Career Advice from HubSpot VP of Growth: What to prioritize in your 20s",
-        caption: "Focus on distribution before creation. Agree or disagree?",
-        winning_archetype: "Executive Leadership Series",
-        cta_type: "Engagement Question"
       }
     ],
     winning_models: [
@@ -315,30 +219,6 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
         hook_templates: [
           "7 AI Prompts for Marketers That Save 15 Hours Every Single Week.",
           "The complete B2B Growth Stack for 2026 (Save this before you start planning)."
-        ]
-      },
-      {
-        model_name: "Model 3: The Industry Counter-Intuitive Mythbuster",
-        badge: "High Discussion & Comments",
-        featured: false,
-        benchmark_metric: "High Debate Velocity",
-        core_psychology: "Challenging conventional marketing dogmas sparks intense debate among founders and marketers.",
-        formula: "[Shocking Marketing Mistake] + [Why Conventional Advice Fails] + [The 1-Step Fix]",
-        hook_templates: [
-          "Why 85% of cold outreach fails in the first 3 words.",
-          "The biggest lie you've been told about organic social growth."
-        ]
-      },
-      {
-        model_name: "Model 4: Executive Leadership & Unfiltered Career Advice",
-        badge: "Brand Authority & Trust",
-        featured: false,
-        benchmark_metric: "High Reputational Lift",
-        core_psychology: "Mentorship from proven operators builds personal resonance.",
-        formula: "[Executive Title Anchor] + [Raw Tactical Takeaway] + [Community Question]",
-        hook_templates: [
-          "What 10 years as VP of Growth taught me about hiring top 1% talent.",
-          "If I had to start my marketing career from scratch in 2026, here is what I'd do."
         ]
       }
     ]
@@ -381,22 +261,6 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
         caption: "Overcomplication is the number one reason so many of you are struggling.",
         winning_archetype: "Mindset Pattern Interrupt",
         cta_type: "Direct CTA ('GARY')"
-      },
-      {
-        id: 2,
-        shortcode: "gary_p2",
-        url: "https://www.instagram.com/reel/Dc6EMQsvNox/",
-        product_type: "clips",
-        likes: 14867,
-        comments: 470,
-        total_engagement: 15337,
-        engagement_rate: "0.13%",
-        er_num: 0.13,
-        performance_tier: "High Performing",
-        hook: "Let’s bust some myths this morning - it’s time to get good at this game",
-        caption: "Stop overthinking and start putting in the reps. Hope this helps someone today.",
-        winning_archetype: "Hard Truth Real-Talk",
-        cta_type: "Soft Engagement"
       }
     ],
     winning_models: [
@@ -410,42 +274,6 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
         hook_templates: [
           "You get one life. Don't spend the next 5 years collecting regrets about Business & Media.",
           "Overcomplication is the #1 reason 99% of people fail. Here is the unvarnished truth."
-        ]
-      },
-      {
-        model_name: "Model 2: The Direct DM Lead Magnet & Resource Drop",
-        badge: "High Conversion Engine",
-        featured: false,
-        benchmark_metric: "High Comment Velocity",
-        core_psychology: "Immediate free value in exchange for a 1-word comment builds massive algorithmic momentum.",
-        formula: "[High-Value Resource Offer] + [Tangible Proof] + [1-Word Capitalized Comment Trigger]",
-        hook_templates: [
-          "I put together my exact blueprint for building leverage in 2026. Drop 'PLAYBOOK' below.",
-          "Don't waste time on broken strategies. Comment 'ACCESS' and I'll DM you the breakdown."
-        ]
-      },
-      {
-        model_name: "Model 3: The Curated Swipe-File & Carousel Guide",
-        badge: "Highest Save & Share Driver",
-        featured: false,
-        benchmark_metric: "Multiplied Feed Distribution",
-        core_psychology: "Bite-sized wisdom formatted across 5-8 carousel slides creates immense perceived utility and bookmarks.",
-        formula: "[Intriguing Cover Slide Hook] + [Step-by-Step Practical Slides] + [Save for Later CTA]",
-        hook_templates: [
-          "GaryVee's Rules for 2026: 7 things you need to unlearn about Business & Content.",
-          "The complete roadmap to scaling your personal brand (Save this before you start your week)."
-        ]
-      },
-      {
-        model_name: "Model 4: Secret Exposure / Gatekeeping Mythbuster",
-        badge: "High Debate & Viral Comments",
-        featured: false,
-        benchmark_metric: "High Shareability",
-        core_psychology: "Us vs. Them transparency. Exposing bad conventional advice establishes instant loyalty.",
-        formula: "[Common Misconception Debunk] + [The Actual Truth / Proof] + [Actionable Fix]",
-        hook_templates: [
-          "The #1 lie gurus tell you about entrepreneurship (and what actually works).",
-          "Why waiting for the 'perfect time' is keeping you broke (and the 2-step fix)."
         ]
       }
     ]
@@ -488,22 +316,6 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
         caption: "Simplicity is the ultimate competitive advantage. Drop 'STACK' for the full source code setup.",
         winning_archetype: "Solo Founder Income Transparency",
         cta_type: "Keyword Trigger ('STACK')"
-      },
-      {
-        id: 2,
-        shortcode: "levels_p2",
-        url: "https://www.instagram.com/levelsio/",
-        product_type: "clips",
-        likes: 4200,
-        comments: 280,
-        total_engagement: 4480,
-        engagement_rate: "1.57%",
-        er_num: 1.57,
-        performance_tier: "High Performing",
-        hook: "Stop building React apps with 50 dependencies. Here is how I ship in 48 hours.",
-        caption: "Fast shipping beats perfectionism every single time.",
-        winning_archetype: "Tech Stack Controversial Hot Take",
-        cta_type: "Direct CTA"
       }
     ],
     winning_models: [
@@ -518,41 +330,60 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
           "How I run a $100k/month startup with 0 employees and a simple tech stack.",
           "Stop raising venture capital. Here is how a solo founder ships in 48 hours."
         ]
-      },
+      }
+    ]
+  },
+  mrbeast: {
+    profile: {
+      username: "mrbeast",
+      name: "MrBeast",
+      followers: 61000000,
+      following: 340,
+      posts_count: 420,
+      bio: "I want to make the world a better place before I die. 🌍\nSubscribe to my YouTube! 🎥\nFounder of Feastables 🍫",
+      profile_url: "https://www.instagram.com/mrbeast/",
+      profile_pic: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&auto=format&fit=crop&q=80"
+    },
+    metrics_summary: {
+      total_likes: 3840000,
+      total_comments: 92400,
+      total_engagements: 3932400,
+      avg_likes_per_post: 480000.0,
+      avg_comments_per_post: 11550.0,
+      avg_engagement_rate: "0.81%",
+      median_engagement_rate: "0.78%",
+      benchmark_industry_avg_er: "0.05%",
+      top_performing_outlier_er: "2.10%"
+    },
+    posts: [
       {
-        model_name: "Model 2: The Fast-Shipping Anti-Framework",
-        badge: "High Shareability",
-        featured: false,
-        benchmark_metric: "4,480 Engagements",
-        core_psychology: "Challenging heavy dev complexity with brutal simplicity.",
-        formula: "[Complexity Callout] + [Raw Lightweight Alternative] + [Resource Drop]",
-        hook_templates: [
-          "Why 90% of SaaS founders never launch (and the 2-day rule to fix it).",
-          "You don't need a team of 10. Here is how AI replaced my entire dev pipeline."
-        ]
-      },
+        id: 1,
+        shortcode: "mrbeast_p1",
+        url: "https://www.instagram.com/mrbeast/",
+        product_type: "clips",
+        likes: 1280000,
+        comments: 34000,
+        total_engagement: 1314000,
+        engagement_rate: "2.10%",
+        er_num: 2.10,
+        performance_tier: "Mega Viral Outlier",
+        hook: "I Survived 7 Days in an Abandoned City with $0",
+        caption: "New video is live! Drop your favorite moment in the comments.",
+        winning_archetype: "Extreme Stakes & Spectacle Hook",
+        cta_type: "Direct Comment CTA"
+      }
+    ],
+    winning_models: [
       {
-        model_name: "Model 3: Nomad Lifestyle & Geo-Arbitrage Blueprint",
-        badge: "High Aspiration",
-        featured: false,
-        benchmark_metric: "High Retention",
-        core_psychology: "Aspirational digital nomad freedom combined with practical financial engineering.",
-        formula: "[Remote Freedom Hook] + [Cost-of-Living Contrast] + [SaaS Automation]",
+        model_name: "Model 1: Extreme Stakes & High Concept Spectacle",
+        badge: "Mega Viral Outlier (1.3M Engagements)",
+        featured: true,
+        benchmark_metric: "1,314,000 Engagements (2.10% ER on 61M Base)",
+        core_psychology: "Unbelievable physical stakes and curiosity gap. The viewer cannot resist watching until the resolution.",
+        formula: "[Absurd Impossible Challenge] + [Extreme Time/Money Constraint] + [Visual Proof in 1st Frame]",
         hook_templates: [
-          "Building startups from anywhere in the world: The 2026 playbook.",
-          "How to live on $2,000/month while scaling a global SaaS product."
-        ]
-      },
-      {
-        model_name: "Model 4: The 1-Click AI Tool Demo",
-        badge: "High Viral Velocity",
-        featured: false,
-        benchmark_metric: "Rapid Saves",
-        core_psychology: "Tangible demonstration of instant software utility.",
-        formula: "[Pain Point] + [1-Click AI Demo] + [Comment Trigger]",
-        hook_templates: [
-          "I trained an AI on 1,000 design layouts to build landing pages in 5 seconds.",
-          "Drop 'AI' to copy my exact automated launch workflow."
+          "I gave 100 random people $10,000 to see who survives the longest.",
+          "I bought an entire island and hid a $1,000,000 briefcase on it."
         ]
       }
     ]

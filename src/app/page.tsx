@@ -29,6 +29,8 @@ export default function Home() {
   const [data, setData] = useState<AuditResult>(VERIFIED_PRESETS.thepulkitproject);
   const [error, setError] = useState<string | null>(null);
   const [postFilter, setPostFilter] = useState<'all' | 'viral' | 'dm'>('all');
+  const [isEditingFollowers, setIsEditingFollowers] = useState(false);
+  const [tempFollowers, setTempFollowers] = useState('');
 
   // Script Generator State
   const [selectedModelIdx, setSelectedModelIdx] = useState(0);
@@ -149,9 +151,46 @@ export default function Home() {
       else if (handle === 'hubspot') setTargetTopic('AI Inbound Lead Machine');
       else if (handle === 'garyvee') setTargetTopic('Building Leverage in 2026');
       else if (handle === 'levelsio') setTargetTopic('Solo Founder $100k/mo Stack');
+      else if (handle === 'mrbeast') setTargetTopic('Extreme 7-Day Survival Challenge');
     } else {
       handleAudit(undefined, handle);
     }
+  }
+
+  // Handle Follower Count Manual Calibration
+  function handleFollowerUpdate(newCount: number) {
+    if (!newCount || newCount <= 0 || !data) return;
+    const updatedPosts = data.posts.map((p) => {
+      const er = (p.total_engagement / newCount) * 100;
+      return {
+        ...p,
+        engagement_rate: `${er.toFixed(2)}%`,
+        er_num: parseFloat(er.toFixed(2)),
+      };
+    });
+    const totalLikes = data.metrics_summary.total_likes;
+    const totalComments = data.metrics_summary.total_comments;
+    const totalEng = totalLikes + totalComments;
+    const avgEr = ((totalEng / (newCount * Math.max(1, updatedPosts.length))) * 100).toFixed(2);
+    const sortedEr = updatedPosts.map((p) => p.er_num).sort((a, b) => a - b);
+    const medianEr = sortedEr[Math.floor(sortedEr.length / 2)]?.toFixed(2) || '1.0';
+    const topOutlierEr = Math.max(...updatedPosts.map((p) => p.er_num)).toFixed(2);
+
+    setData({
+      ...data,
+      profile: {
+        ...data.profile,
+        followers: newCount,
+      },
+      metrics_summary: {
+        ...data.metrics_summary,
+        avg_engagement_rate: `${avgEr}%`,
+        median_engagement_rate: `${medianEr}%`,
+        top_performing_outlier_er: `${topOutlierEr}%`,
+      },
+      posts: updatedPosts,
+    });
+    setIsEditingFollowers(false);
   }
 
   // Export Report
@@ -293,6 +332,13 @@ RECOMMENDATIONS:
               >
                 @levelsio
               </button>
+              <button 
+                type="button" 
+                className={`sample-chip ${activeChip === 'mrbeast' ? 'active' : ''}`}
+                onClick={() => handlePreset('mrbeast')}
+              >
+                @mrbeast
+              </button>
             </div>
 
             {/* Loading Banner */}
@@ -346,9 +392,40 @@ RECOMMENDATIONS:
             {/* KPI Metric Grid */}
             <div className="kpi-grid">
               <div className="kpi-card">
-                <div className="kpi-label">Follower Base</div>
-                <div className="kpi-val">{data.profile.followers.toLocaleString()}</div>
-                <div className="kpi-trend positive">+ High Growth Potential</div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div className="kpi-label">Follower Base</div>
+                  <button 
+                    type="button"
+                    onClick={() => {
+                      setIsEditingFollowers(!isEditingFollowers);
+                      setTempFollowers(data.profile.followers.toString());
+                    }}
+                    style={{ background: 'transparent', border: 'none', color: '#a855f7', cursor: 'pointer', fontSize: '0.75rem', fontWeight: 600 }}
+                  >
+                    {isEditingFollowers ? 'Cancel' : 'Calibrate ✏️'}
+                  </button>
+                </div>
+                {isEditingFollowers ? (
+                  <div style={{ display: 'flex', gap: '6px', marginTop: '6px' }}>
+                    <input 
+                      type="number"
+                      value={tempFollowers}
+                      onChange={(e) => setTempFollowers(e.target.value)}
+                      className="form-control"
+                      style={{ padding: '4px 8px', fontSize: '1rem', height: '36px' }}
+                    />
+                    <button 
+                      onClick={() => handleFollowerUpdate(parseInt(tempFollowers))}
+                      className="btn btn-primary"
+                      style={{ padding: '4px 12px', fontSize: '0.8rem', height: '36px' }}
+                    >
+                      Save
+                    </button>
+                  </div>
+                ) : (
+                  <div className="kpi-val">{data.profile.followers.toLocaleString()}</div>
+                )}
+                <div className="kpi-trend positive">Click Calibrate to adjust anytime</div>
               </div>
               <div className="kpi-card highlight-glow">
                 <div className="kpi-label">Top Outlier Engagement</div>
