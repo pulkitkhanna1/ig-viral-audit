@@ -1,4 +1,0 @@
-# Standard library dependencies used (urllib, json, re, concurrent.futures)
-# Additional optional dependencies for Vercel Python runtime:
-urllib3
-requests
