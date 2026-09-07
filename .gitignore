@@ -1,7 +1,22 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+build/
+dist/
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-.DS_Store
-.env
-cache/
 *.log
+
+# Misc
+.DS_Store
+*.pem
+.env*.local
+.vercel

@@ -1,17 +1,18 @@
-# 🚀 IG ViralAudit • Instagram Page Audit & Winning Models Platform
+# 🚀 IG ViralAudit • Next.js Instagram Page Audit & Winning Models Platform
 
-An open-source, AI-powered Instagram profile audit engine and content intelligence platform. Enter any public Instagram profile URL or `@handle` to extract real-time engagement telemetry, viral outlier analysis, and **4 tailored "Winning Models" & ready-to-record Reel scripts**.
+A modern, high-performance **Next.js 14 (React + TypeScript)** application for auditing Instagram profiles and generating **4 customized "Winning Models" & ready-to-record Reel scripts**. Built to deploy seamlessly on Vercel with zero extra configuration.
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
+- **⚡ Native Next.js 14 App Router:** Built with React 18, TypeScript, Lucide Icons, and modern glassmorphic design.
 - **🔍 Universal Profile Auditing:** Paste any Instagram URL (`https://instagram.com/thepulkitproject`), `@handle`, or username.
-- **⚡ Parallel Telemetry Extraction:** High-speed, multi-threaded scraper (`ThreadPoolExecutor`) that extracts live likes, comments, reels, view counts, and engagement rates in under 2 seconds.
+- **🛡️ Vercel-Ready Serverless Architecture:** Native Next.js Route Handlers (`/api/audit`) that run globally on Vercel Edge/Serverless with built-in fallback intelligence.
 - **📊 Statistical & Benchmark Analysis:**
   - Account Average Engagement Rate vs. Industry Niche Benchmarks (~2.1%).
   - Median Post Engagement Rate & 10x Outlier Multipliers.
-  - Comment-to-Like Velocity Ratios (Direct Lead Capture Funnel health).
+  - Comment-to-Like Velocity Ratios (Lead Capture Funnel health).
 - **🏆 4 Automated "Winning Models":**
   1. **Visual Transformation & Proof Demo:** Show-not-tell instant gratification frameworks (top viral outliers).
   2. **Disruption & Replacement Lead Magnet:** Fear of obsolescence & FOMO hooks with automated keyword DM triggers.
@@ -19,7 +20,6 @@ An open-source, AI-powered Instagram profile audit engine and content intelligen
   4. **Secret Exposure & Creator Mythbuster:** Us vs. Them transparency building instant rapport and comment velocity.
 - **🎬 Interactive AI Reel Script Generator:** Live, copy-pasteable 20–45s reel scripts (Hook, B-roll action, Value delivery, DM CTA) customized to the active profile's niche.
 - **📑 One-Click Report Export:** Download comprehensive Markdown audit reports instantly.
-- **⚡ Zero-Dependency Python Server:** Works out of the box on any machine with built-in Python 3 standard libraries.
 
 ---
 
@@ -31,11 +31,24 @@ An open-source, AI-powered Instagram profile audit engine and content intelligen
 git clone https://github.com/pulkitkhanna1/ig-viral-audit.git
 cd ig-viral-audit
 
-# Start the local server
-python3 server.py 3000
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
 Open your browser at **[http://localhost:3000](http://localhost:3000)**.
+
+---
+
+## ☁️ Deploy to Vercel
+
+Because this is a native Next.js application, deploying to Vercel takes 1 click with **zero configuration**:
+
+1. Push your repository to GitHub.
+2. Import the project in [Vercel Dashboard](https://vercel.com/new).
+3. Vercel automatically detects **Next.js** and deploys both the frontend and API routes instantly!
 
 ---
 
@@ -45,61 +58,12 @@ Open your browser at **[http://localhost:3000](http://localhost:3000)**.
 Audits any public Instagram account in real-time.
 
 **Query Parameters:**
-- `url` or `username`: The Instagram profile link or handle (e.g. `thepulkitproject`, `hubspot`, `levelsio`).
+- `url` or `username`: The Instagram profile link or handle (e.g. `thepulkitproject`, `hubspot`, `garyvee`).
 
 **Example Request:**
 ```bash
 curl "http://localhost:3000/api/audit?username=thepulkitproject"
 ```
-
-**Example Response:**
-```json
-{
-  "profile": {
-    "username": "thepulkitproject",
-    "name": "Pulkit Khanna | Certified AI coach",
-    "followers": 3578,
-    "following": 0,
-    "posts_count": 8,
-    "bio": "Making AI simpler for humans 🤖...",
-    "profile_url": "https://www.instagram.com/thepulkitproject/",
-    "profile_pic": "https://..."
-  },
-  "metrics_summary": {
-    "total_likes": 28337,
-    "total_comments": 6975,
-    "total_engagements": 35312,
-    "avg_engagement_rate": "123.4%",
-    "median_engagement_rate": "9.84%",
-    "top_performing_outlier_er": "844.2%"
-  },
-  "posts": [ ... ],
-  "winning_models": [ ... ]
-}
-```
-
----
-
-## 📂 Project Architecture
-
-```
-IG audit/
-├── index.html          # Dark-mode, glassmorphic UI dashboard
-├── style.css           # Modern CSS design system & micro-animations
-├── app.js              # Client controller, API client & script generator
-├── server.py           # Multi-threaded Python server & REST API
-├── audit_service.py    # Core extraction engine & statistical modeling
-├── ig_audit_engine.py  # CLI audit utility
-├── audit_data.json     # Sample audited telemetry dataset
-└── README.md           # Documentation & setup guide
-```
-
----
-
-## 🛡️ Privacy & Rate-Limiting Architecture
-- Uses public web telemetry and open Meta hydration graphs with client-agnostic parsing.
-- Does **not** require user passwords or account credentials (zero risk of account bans).
-- Built-in in-memory caching prevents repeated external queries for the same handle.
 
 ---
 
