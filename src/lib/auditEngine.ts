@@ -262,8 +262,8 @@ export async function auditAccount(query: string): Promise<AuditResult> {
     bio = `Creator & Operator • Sharing frameworks and high-impact strategies in ${detectNiche(name, name, username).niche} 🚀`;
   }
 
-  if (followers === 0) {
-    followers = 8500; // Baseline fallback only if account is completely blocked/private
+  if (!followersMatch) {
+    throw new Error(`Could not find public profile for @${username}. Please ensure the account exists, is public, and the handle is spelled correctly.`);
   }
 
   // Extract Posts / Clips from Relay Hydration
