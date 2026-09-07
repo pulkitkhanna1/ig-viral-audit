@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { VERIFIED_PRESETS } from '@/lib/presets';
+import { cleanHandle } from '@/lib/auditEngine';
 import { AuditResult, WinningModel } from '@/types/audit';
 import { 
   Instagram, 
@@ -94,6 +95,24 @@ export default function Home() {
     setLoading(true);
     setLoadingStep('Connecting to Instagram profile...');
 
+    const clean = cleanHandle(target).toLowerCase();
+
+    // Instant client-side resolution if verified preset exists
+    if (VERIFIED_PRESETS[clean]) {
+      setTimeout(() => {
+        setData(VERIFIED_PRESETS[clean]);
+        setLoading(false);
+        setActiveChip(clean);
+        if (clean === 'thepulkitproject') setTargetTopic('Claude 3.7 Hybrid Reasoning');
+        else if (clean === 'hubspot') setTargetTopic('AI Inbound Lead Machine');
+        else if (clean === 'garyvee') setTargetTopic('Building Leverage in 2026');
+        else if (clean === 'levelsio') setTargetTopic('Solo Founder $100k/mo Stack');
+        else if (clean === 'mrbeast') setTargetTopic('Extreme 7-Day Survival Challenge');
+        else if (clean === 'yuktakandhari' || clean === 'askyukta') setTargetTopic('Inside Global Founder Minds');
+      }, 250);
+      return;
+    }
+
     const stepTimer = setTimeout(() => {
       setLoadingStep('Parsing recent reels telemetry and outlier velocity...');
     }, 600);
@@ -103,7 +122,10 @@ export default function Home() {
     }, 1200);
 
     try {
-      const res = await fetch(`/api/audit?url=${encodeURIComponent(target)}`);
+      // Bust edge and browser cache with timestamp & no-store
+      const res = await fetch(`/api/audit?url=${encodeURIComponent(target)}&_t=${Date.now()}`, {
+        cache: 'no-store'
+      });
       const result = await res.json();
       clearTimeout(stepTimer);
       clearTimeout(stepTimer2);
@@ -125,6 +147,8 @@ export default function Home() {
         setTargetTopic('Building Leverage in 2026');
       } else if (result.profile.username === 'levelsio') {
         setTargetTopic('Solo Founder $100k/mo Stack');
+      } else if (result.profile.username === 'yuktakandhari' || result.profile.username === 'askyukta') {
+        setTargetTopic('Inside Global Founder Minds');
       } else if (bioText.includes('career') || bioText.includes('job') || bioText.includes('remote')) {
         setTargetTopic('6-Figure Global Remote Jobs in Tech');
       } else if (bioText.includes('fitness')) {
