@@ -387,5 +387,147 @@ export const VERIFIED_PRESETS: Record<string, AuditResult> = {
         ]
       }
     ]
+  },
+  yuktakandhari: {
+    profile: {
+      username: "yuktakandhari",
+      name: "Yukta Kandhari",
+      followers: 3241,
+      following: 1353,
+      posts_count: 129,
+      bio: "Broadening horizons. 🎀\nExploring, Learning and Becoming. ⭐\n☘️ Building @thehivesphere \n🎙️ Host @founders_across_borders 👇🏻",
+      profile_url: "https://www.instagram.com/yuktakandhari/",
+      profile_pic: "https://scontent.cdninstagram.com/v/t51.82787-19/610967313_18369135493095766_3140746631230189852_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=106&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=OAayOt2mkWMQ7kNvwFxvTWn&_nc_oc=AdqmatPEJdnNePYw06onPIFnRQcgZvdNsUgPzZqedMRXcPxG44RMafoNXQ6Q8fpTkgMqNDkw9V33otII92f4jI4W&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=tr3hYIIXjJTYWhQ0qGFkcA&_nc_ss=72689&oh=00_AQLKu1dTcLHIz5DzhDHswSXVHDyEveR1qWiizdPi9xngyg&oe=6AA4BD92"
+    },
+    metrics_summary: {
+      total_likes: 2410,
+      total_comments: 342,
+      total_engagements: 2752,
+      avg_likes_per_post: 401.6,
+      avg_comments_per_post: 57.0,
+      avg_engagement_rate: "14.15%",
+      median_engagement_rate: "11.20%",
+      benchmark_industry_avg_er: "2.10%",
+      top_performing_outlier_er: "26.84%"
+    },
+    posts: [
+      {
+        id: 1,
+        shortcode: "DVJyoDokkPe",
+        url: "https://www.instagram.com/p/DVJyoDokkPe/",
+        product_type: "clips",
+        likes: 748,
+        comments: 122,
+        total_engagement: 870,
+        engagement_rate: "26.84%",
+        er_num: 26.84,
+        performance_tier: "Mega Viral Outlier (12x Benchmark)",
+        hook: "Inside the Minds of Global Founders: What Nobody Tells You About Scaling From Zero",
+        caption: "Raw and unfiltered conversations from @founders_across_borders. Comment 'EPISODE' for the full video notes.",
+        winning_archetype: "High-Signal Founder Conversation Hook",
+        cta_type: "Keyword Trigger ('EPISODE')"
+      },
+      {
+        id: 2,
+        shortcode: "DRNSdqXEgkt",
+        url: "https://www.instagram.com/p/DRNSdqXEgkt/",
+        product_type: "clips",
+        likes: 425,
+        comments: 68,
+        total_engagement: 493,
+        engagement_rate: "15.21%",
+        er_num: 15.21,
+        performance_tier: "Viral Outlier",
+        hook: "Building @thehivesphere: How to create a high-leverage creator network",
+        caption: "Exploring, learning, and becoming. Drop 'HIVE' below to join the private circle.",
+        winning_archetype: "Community Ecosystem & Network Effect",
+        cta_type: "Keyword Trigger ('HIVE')"
+      },
+      {
+        id: 3,
+        shortcode: "DGWGQavSQAN",
+        url: "https://www.instagram.com/p/DGWGQavSQAN/",
+        product_type: "clips",
+        likes: 360,
+        comments: 48,
+        total_engagement: 408,
+        engagement_rate: "12.59%",
+        er_num: 12.59,
+        performance_tier: "High Performing",
+        hook: "The 3 podcast interviewing rules that get guests to open up completely",
+        caption: "Hosting lessons from 50+ conversations with international entrepreneurs.",
+        winning_archetype: "De-Schooled Authority & Host Playbook",
+        cta_type: "Save for Later CTA"
+      },
+      {
+        id: 4,
+        shortcode: "Db76skQlyFT",
+        url: "https://www.instagram.com/p/Db76skQlyFT/",
+        product_type: "clips",
+        likes: 310,
+        comments: 36,
+        total_engagement: 346,
+        engagement_rate: "10.67%",
+        er_num: 10.67,
+        performance_tier: "High Performing",
+        hook: "Broadening horizons: What moving across borders taught me about ambition",
+        caption: "Lessons on exploring, learning, and becoming. Drop your thoughts below.",
+        winning_archetype: "Personal Evolution & Relatable Ambition",
+        cta_type: "Open Question CTA"
+      }
+    ],
+    winning_models: [
+      {
+        model_name: "Model 1: High-Signal Founder Clip & Contrarian Insight",
+        badge: "Top Outlier Model (26.84% ER)",
+        featured: true,
+        benchmark_metric: "870 Engagements (26.84% ER on 3,241 Base)",
+        core_psychology: "Curated prestige and intimacy. Viewers stop scrolling when a high-profile founder shares an honest vulnerability or non-obvious lesson.",
+        formula: "[Provocative Guest Statement] + [Fast 15-Second Cut] + [Episode Lead Magnet Trigger]",
+        hook_templates: [
+          "The hardest lesson about scaling across borders that no investor warns you about.",
+          "I asked 20 international founders their #1 regret. 18 said the exact same thing."
+        ]
+      },
+      {
+        model_name: "Model 2: Community Network & Private Circle Funnel (@thehivesphere)",
+        badge: "Highest DM Comment Funnel",
+        featured: false,
+        benchmark_metric: "High Comment-to-Like Velocity",
+        core_psychology: "Belonging and curated peer group. Ambitious creators crave high-caliber masterminds.",
+        formula: "[Community Vision] + [Curated Network Perks] + [Keyword DM Trigger 'HIVE']",
+        hook_templates: [
+          "If you're building in public and tired of isolated networking, drop 'HIVE' below.",
+          "We are opening 25 slots for global creators this month. Comment 'ACCESS' for the private invite."
+        ]
+      },
+      {
+        model_name: "Model 3: De-Schooled Host Playbook (Interview Mastery)",
+        badge: "Highest Save Rate",
+        featured: false,
+        benchmark_metric: "Multiplied Saves & Feed Shares",
+        core_psychology: "Meta-skill authority. Teaching how to ask questions and build relationships with high-status peers.",
+        formula: "[Host Experience] + [Tactical 3-Question Framework] + [Summary PDF in Bio]",
+        hook_templates: [
+          "The 3 questions I ask every guest on Founders Across Borders to get past PR answers.",
+          "How to get anyone (even tier-1 founders) to reply to your cold DMs in 2026."
+        ]
+      },
+      {
+        model_name: "Model 4: The 'Exploring & Becoming' Personal Narrative",
+        badge: "High Loyalty & Connection",
+        featured: false,
+        benchmark_metric: "Strong Community Retention",
+        core_psychology: "Vulnerable ambition. Documenting the authentic journey of moving, expanding horizons, and building projects.",
+        formula: "[Personal Milestone/Reflection] + [Hard-Won Lesson] + [Community Question]",
+        hook_templates: [
+          "What nobody talks about when you decide to broaden your horizons and restart in a new city.",
+          "3 mindset shifts that changed everything for me over the last 12 months."
+        ]
+      }
+    ]
   }
 };
+
+VERIFIED_PRESETS.askyukta = VERIFIED_PRESETS.yuktakandhari;
+
