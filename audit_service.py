@@ -460,7 +460,7 @@ def audit_instagram_account(input_handle: str) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     import sys
-    user = sys.argv[1] if len(sys.argv) > 1 else "askyukta"
+    user = sys.argv[1] if len(sys.argv) > 1 else "thepulkitproject"
     res = audit_instagram_account(user)
     print(f"Audit completed for @{res['profile']['username']} ({res['profile']['name']})")
     print(f"Bio: {res['profile']['bio']}")

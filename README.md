@@ -45,7 +45,7 @@ Open your browser at **[http://localhost:3000](http://localhost:3000)**.
 Audits any public Instagram account in real-time.
 
 **Query Parameters:**
-- `url` or `username`: The Instagram profile link or handle (e.g. `thepulkitproject`, `askyukta`, `hubspot`).
+- `url` or `username`: The Instagram profile link or handle (e.g. `thepulkitproject`, `hubspot`, `levelsio`).
 
 **Example Request:**
 ```bash

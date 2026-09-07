@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const bioText = (profile.bio || '').toLowerCase();
             if (profile.username === 'thepulkitproject') {
                 topicInput.value = 'Claude 3.7 Hybrid Reasoning';
-            } else if (bioText.includes('career') || bioText.includes('job') || bioText.includes('remote') || profile.username === 'askyukta') {
+            } else if (bioText.includes('career') || bioText.includes('job') || bioText.includes('remote')) {
                 topicInput.value = '6-Figure Global Remote Jobs in Tech';
             } else if (bioText.includes('fitness')) {
                 topicInput.value = '10-Minute High Intensity Fat Loss Routine';
